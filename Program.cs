@@ -35,12 +35,14 @@ while (isWorking)
     
     Console.WriteLine("Если желаешь посмотреть в зеркало ещё раз, нажми цифру '1' на клавиатуре, если стало стыдно и решил уйти - нажми цифру '0' на клавиатуре. Выбор за тобой.");
     int userInput = int.Parse(Console.ReadLine());
+    int continueOption = 1;
+    int exitOption = 0;
 
-    if (userInput == 1)
+    if (userInput == continueOption)
     {
         continue;
     }
-    else if (userInput == 0)
+    else if (userInput == exitOption)
     {
         isWorking = false;
         Console.WriteLine("Бывай и будь здоров!");

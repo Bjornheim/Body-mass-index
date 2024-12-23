@@ -1,12 +1,12 @@
-﻿int exitChoice = 1;
+﻿double underweight = 18.5;
+double normalBodyWeight = 24.9;
+double overweight = 25;
+int obesity = 30;
 
-while (exitChoice == 1)
+bool isWorking = true;
+
+while (isWorking)
 {
-    double underweight = 18.5;
-    double normalBodyWeight = 24.9;
-    double overweight = 25;
-    int obesity = 30;
-
     Console.WriteLine("Эй, парень, какой у тебя рост?:");
     float height = float.Parse(Console.ReadLine());
     float heightInMeters = height / 100f;
@@ -34,5 +34,19 @@ while (exitChoice == 1)
     }
     
     Console.WriteLine("Если желаешь посмотреть в зеркало ещё раз, нажми цифру '1' на клавиатуре, если стало стыдно и решил уйти - нажми цифру '0' на клавиатуре. Выбор за тобой.");
-    exitChoice = Convert.ToInt32(Console.ReadLine());
+    int userInput = int.Parse(Console.ReadLine());
+
+    if (userInput == 1)
+    {
+        continue;
+    }
+    else if (userInput == 0)
+    {
+        isWorking = false;
+        Console.WriteLine("Бывай и будь здоров!");
+    }
+    else
+    {
+        Console.WriteLine("Некорректное значение. Попробуй ещё раз.");
+    }
 }

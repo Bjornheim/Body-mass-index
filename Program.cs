@@ -32,12 +32,12 @@ while (isWorking)
     {
         Console.WriteLine($"Индекс массы твоего тела составляет {bmi}. Оцениваю его как 'ожирение'. Ох и ропуха же ты! Небось в дверные проемы не влезаешь?");
     }
-    
+
     Console.WriteLine("Если желаешь посмотреть в зеркало ещё раз, нажми цифру '1' на клавиатуре, если стало стыдно и решил уйти - нажми цифру '0' на клавиатуре. Выбор за тобой.");
     int userInput = int.Parse(Console.ReadLine());
     int continueOption = 1;
     int exitOption = 0;
-
+    
     if (userInput == continueOption)
     {
         continue;
@@ -47,8 +47,12 @@ while (isWorking)
         isWorking = false;
         Console.WriteLine("Бывай и будь здоров!");
     }
-    else
+    else 
     {
-        Console.WriteLine("Некорректное значение. Попробуй ещё раз.");
+        while (userInput != continueOption && userInput != exitOption)
+        {
+            Console.WriteLine("Некорректное значение. Попробуй ещё раз.");
+            userInput = int.Parse(Console.ReadLine());
+        }
     }
 }

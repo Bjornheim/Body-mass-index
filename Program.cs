@@ -2,6 +2,8 @@
 double normalBodyWeight = 24.9;
 double overweight = 25;
 int obesity = 30;
+int continueOption = 1;
+int exitOption = 0;
 
 bool isWorking = true;
 
@@ -33,10 +35,8 @@ while (isWorking)
         Console.WriteLine($"Индекс массы твоего тела составляет {bmi}. Оцениваю его как 'ожирение'. Ох и ропуха же ты! Небось в дверные проемы не влезаешь?");
     }
 
-    Console.WriteLine("Если желаешь посмотреть в зеркало ещё раз, нажми цифру '1' на клавиатуре, если стало стыдно и решил уйти - нажми цифру '0' на клавиатуре. Выбор за тобой.");
+    Console.WriteLine($"Если желаешь посмотреть в зеркало ещё раз, нажми цифру {coninueOption} на клавиатуре, если стало стыдно и решил уйти - нажми цифру {exitOption} на клавиатуре. Выбор за тобой.");
     int userInput = int.Parse(Console.ReadLine());
-    int continueOption = 1;
-    int exitOption = 0;
     
     if (userInput == continueOption)
     {
